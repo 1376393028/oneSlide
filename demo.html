@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Oneslide-极简 markdown PPT</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <!-- <link rel="stylesheet" href="dist/theme/sky.css" id="theme"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2358439_og3vzohbwxq.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.10.0/dist/av-min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@5.0.0-rc.5/dist/im-browser.min.js"></script>
+
+<body>
+    <div class="control">
+        <span class="iconfont icon-setting"></span>
+    </div>
+    <div class="menu">
+        <span class="iconfont icon-close"></span>
+        <div class="detail">
+            <div class="tab active"><span class="iconfont icon-edit"></span>内容编辑</div>
+            <div class="tab"><span class="iconfont icon-theme"></span>主题与特效</div>
+            <div class="tab download"><span class="iconfont icon-download"></span>下载PDF</div>
+            <div class="tab "><span class="iconfont icon-speaker"></span>演讲者模式</div>
+            <div class="content active">
+                <div class="header">编辑</div>
+                <div class="body editor">
+                    <textarea></textarea>
+                    <div class="uploader">
+                        <input type="file" accept="image/*" id="img-uploader">
+                        <label for="img-uploader">点击上传图片(支持 .png, .jpg, .gif,最大2M)</label>
+                    </div>
+                    <div>
+                        <button class="button-save">保存</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="header">主题特效</div>
+                <div class="body theme">
+                    <h5>主题</h5>
+                    <div class="themes">
+                        <figure data-theme="beige">
+                            <img src="./img/beige.PNG" alt="beige">
+                            <figcaption>beige</figcaption>
+                        </figure>
+                        <figure data-theme="black">
+                            <img src="./img/black.PNG" alt="black">
+                            <figcaption>black</figcaption>
+                        </figure>
+                        <figure data-theme="blood">
+                            <img src="./img/blood.PNG" alt="blood">
+                            <figcaption>blood</figcaption>
+                        </figure>
+                        <figure data-theme="league">
+                            <img src="./img/league.PNG" alt="league">
+                            <figcaption>league</figcaption>
+                        </figure>
+                        <figure data-theme="moon">
+                            <img src="./img/moon.PNG" alt="moon">
+                            <figcaption>moon</figcaption>
+                        </figure>
+                        <figure data-theme="night">
+                            <img src="./img/night.PNG" alt="night">
+                            <figcaption>night</figcaption>
+                        </figure>
+                        <figure data-theme="serif">
+                            <img src="./img/serif.PNG" alt="serif">
+                            <figcaption>serif</figcaption>
+                        </figure>
+                        <figure data-theme="simple">
+                            <img src="./img/simple.PNG" alt="simple">
+                            <figcaption>simple</figcaption>
+                        </figure>
+                        <figure class="" data-theme="sky">
+                            <img src="./img/sky.PNG" alt="sky">
+                            <figcaption>sky</figcaption>
+                        </figure>
+                        <figure data-theme="solarized">
+                            <img src="./img/solarized.PNG" alt="solarized">
+                            <figcaption>solarized</figcaption>
+                        </figure>
+                    </div>
+
+                    <h5>转场</h5>
+                    <select class="transition">
+                        <option value="none">无</option>
+                        <option value="fade">淡出</option>
+                        <option value="slide">滑动</option>
+                        <option value="convex">凸出</option>
+                        <option value="concave">凹陷</option>
+                        <option value="zoom">缩放</option>
+                    </select>
+
+                    <h5>对齐</h5>
+                    <select class="align">
+                        <option value="center">居中</option>
+                        <option value="left-top">左上</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content">
+                <div class="header">主题</div>
+                <div class="body download">
+                    <p>下载PDF</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="header">演讲者模式</div>
+                <div class="body speaker">
+                    <p>按<strong>S</strong>键，开启演讲者模式</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+        </div>
+
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // let link = document.createElement('link')
+        // link.rel = 'stylesheet'
+        // link.type = 'text/css'
+        // document.getElementsByTagName('head')[0].appendChild(link)
+        // if (window.location.search.match(/ print-pdf /gi)) {
+        //     link.hrfe = 'css/print/pdf.css'
+        //     window.print()
+        // } else {
+        //     link.hrfe = 'css/print/paper.css'
+        // }
+    </script>
+
+</body>
+
+</html>
